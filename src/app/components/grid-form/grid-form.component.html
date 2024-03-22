@@ -1,0 +1,34 @@
+<div class="p-24">
+    <form [formGroup]="numForm" (ngSubmit)="submit()" class="d-flex flex-column gap-24">
+        <div class="row">
+            <div class="col-4 col-md-3 col-lg-2 col-xl-2 my-auto">
+                <label for="gridSize" class="my-auto fw-bold">Grid Size</label>
+            </div>
+            <div class="col-8 col-xs-9 col-md-6 col-lg-5 col-xl-4 my-auto">
+                <input type="number" class="form-control" id="gridSize" formControlName="gridSize" [min]="2"
+                    [ngClass]="{ 'border-danger': numForm.controls['gridSize'].touched && numForm.controls['gridSize'].invalid }">
+                <span *ngIf="numForm.controls['gridSize'].touched && numForm.controls['gridSize'].invalid"
+                    class="text-danger font-14 fw-bold">Grid Size is required.</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 col-md-3 col-lg-2 col-xl-2 my-auto">
+                <label for="totalSum" class="my-auto fw-bold">Total Sum</label>
+            </div>
+            <div class="col-8 col-xs-9 col-md-6 col-lg-5 col-xl-4 my-auto">
+                <input type="number" class="form-control" id="totalSum" formControlName="totalSum" [min]="min"
+                    [max]="max"
+                    [ngClass]="{ 'border-danger': numForm.controls['totalSum'].touched && numForm.controls['totalSum'].invalid }">
+                <span *ngIf="numForm.controls['totalSum'].touched && numForm.controls['totalSum'].invalid"
+                    class="text-danger font-14 fw-bold">Total Sum is invalid.</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 col-md-3 col-lg-2 col-xl-2 my-auto">
+            </div>
+            <div class="col-8 col-xs-9 col-md-6 col-lg-5 col-xl-4 my-auto">
+                <button class="btn btn-primary w-100 px-16">Go!</button>
+            </div>
+        </div>
+    </form>
+</div>

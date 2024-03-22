@@ -1,0 +1,13 @@
+<app-notifications aria-live="polite" aria-atomic="true"></app-notifications>
+<div class="container p-8 d-flex flex-column">
+  <div class="card">
+    <div class="card-body p-0">
+      <app-grid-form [min]="min" [max]="max" [gridSize]="gridSize" (valueEmitter)="onValueEmit($event)"></app-grid-form>
+    </div>
+  </div>
+  <div class="card border-2" *ngIf="grid">
+    <div class="card-body p-0">
+      <app-grid [grid]="grid"></app-grid>
+    </div>
+  </div>
+</div>

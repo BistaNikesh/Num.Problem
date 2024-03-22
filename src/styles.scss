@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i&display=swap');
+
+html,
+body {
+  font-family: 'Titillium Web', sans-serif !important;
+  overflow-x: hidden;
+  background-color: #ccc !important;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.pointer  {
+    cursor: pointer;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+.toast-body {
+    padding: 10px !important;
+}
+
+.d-grid {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}
+
+.px-16 {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+}
+
+.p-24 {
+    padding: 24px !important;
+}
+
+.p-8 {
+    padding: 8px !important;
+}
+
+.gap-24 {
+    gap: 24px;
+}

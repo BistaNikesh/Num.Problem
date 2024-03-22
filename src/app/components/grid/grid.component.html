@@ -1,0 +1,7 @@
+<div class="text-center d-flex flex-column gap-24 p-24">
+    <div *ngFor="let row of grid" class="d-grid gap-24">
+        <div class="card" *ngFor="let num of row">
+            <div class="card-body p-24">{{num}}</div>
+        </div>
+    </div>
+</div>
